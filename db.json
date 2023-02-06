@@ -1,5 +1,24 @@
 {
-  "posts": [],
+  "posts": [
+    {
+      "id": 2,
+      "fullName": "leeal",
+      "vehcileNo": "KA01295668",
+      "emailId": "anitha.kh2029@gmail.com",
+      "mobileNo": 9880220894,
+      "cityName": "pune",
+      "vehicleNo": "KA0112346MT"
+    },
+    {
+      "id": 1,
+      "fullName": "meena",
+      "vehcileNo": "Ka012367MT",
+      "emailId": "anitha.khsmile@gmail.com",
+      "mobileNo": 9535288788,
+      "cityName": "mumbai",
+      "vehicleNo": "KA0112346MT"
+    }
+  ],
   "comments": [],
   "profile": {
     "name": "typicode"

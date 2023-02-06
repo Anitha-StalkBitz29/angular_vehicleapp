@@ -70,7 +70,7 @@ export class DashboardComponent implements OnInit {
 
   addNewVehiclesData(){
       this.vehiclesmodelObj.fullName = this.formValue.value.fullName;
-      this.vehiclesmodelObj.vehcileNo = this.formValue.value.vehicleNo;
+      this.vehiclesmodelObj.vehicleNo = this.formValue.value.vehicleNo;
       this.vehiclesmodelObj.emailId = this.formValue.value.emailId;
       this.vehiclesmodelObj.mobileNo = this.formValue.value.mobileNo;
       this.vehiclesmodelObj.cityName = this.formValue.value.cityName; 

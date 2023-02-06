@@ -10,8 +10,6 @@ export class ApiService {
   constructor(private _http:HttpClient) { }
 
   //create by Post method;
-
-
   postVehicleData(data: any){
     return this._http.post<any>("http://localhost:3000/posts", data)
     .pipe(map((res:any) =>{
@@ -26,7 +24,6 @@ export class ApiService {
       return res;
     }))
   }
-
 
   //Update Method for the Vehicles Data:
   updateVehcileData(data:any, id:number){

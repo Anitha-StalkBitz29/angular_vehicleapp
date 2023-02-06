@@ -5,4 +5,5 @@ export class vehiclesdata{
     emailId: string ="";
     mobileNo: number = 0;
     cityName: string = "";
+  vehicleNo: any;
 }
