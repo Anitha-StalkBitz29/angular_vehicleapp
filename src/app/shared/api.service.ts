@@ -30,7 +30,7 @@ export class ApiService {
 
   //Update Method for the Vehicles Data:
   updateVehcileData(data:any, id:number){
-    return this._http.put("http://localhost:3000/posts"+ id,data)
+    return this._http.put("http://localhost:3000/posts/"+ id,data)
     .pipe(map((res:any)=>{
       return res;
     })) 

@@ -16,84 +16,86 @@
 <!-- table -->
 <table class="table mt-4">
     <thead>
-        <tr>
-            <th scope="col">S. ID</th>
-            <th scope="col">Name</th>
-            <th scope="col">Email</th>
-            <th scope="col">Mobile</th>
-            <th scope="col">City</th>
-            <th scope="col">Action</th>
+        <tr class="header-bg">
+            <th scope="col" class="th_width">S. ID</th>
+            <th scope="col" class="th_width">Name</th>
+            <th scope="col" style="width:230px">Vehicle Number</th>
+            <th scope="col " class="th_width ">Email</th>
+            <th scope="col " class="th_width ">Mobile</th>
+            <th scope="col " class="th_width ">City</th>
+            <th scope="col " class="th_width ">Action</th>
         </tr>
     </thead>
 
     <tbody>
-        <tr *ngFor="let vehiclesdata of allvehiclesdata">
+        <tr *ngFor="let vehiclesdata of allvehiclesdata ">
             <td>{{vehiclesdata.id}}</td>
+            <td>{{vehiclesdata.fullName}}</td>
             <td>{{vehiclesdata.vehicleNo}}</td>
             <td>{{vehiclesdata.emailId}}</td>
             <td>{{vehiclesdata.mobileNo}}</td>
             <td>{{vehiclesdata.cityName}}</td>
             <td>
-                <button class="btn btn-info" (click)="editData(vehiclesdata)" data-toggle="modal" data-target="#exampleModal">Edit</button>&nbsp;
-                <button class="btn btn-danger" (click)="deleteVehcilesInfo(vehiclesdata)">Delete</button>
+                <button class="btn btn-info " (click)="editData(vehiclesdata) " data-toggle="modal " data-target="#exampleModal ">Edit</button>&nbsp;
+                <button class="btn btn-danger " (click)="deleteVehcilesInfo(vehiclesdata) ">Delete</button>
             </td>
         </tr>
     </tbody>
 </table>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
+<div class="modal fade " id="exampleModal " tabindex="-1 " role="dialog " aria-labelledby="exampleModalLabel " aria-hidden="true ">
+    <div class="modal-dialog " role="document ">
+        <div class="modal-content ">
 
 
-            <div class="modal-header" style="background-color:skyblue">
-                <h5 class="modal-title" id="exampleModalLabel ">Vehicles Data</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <div class="modal-header " style="background-color:skyblue ">
+                <h5 class="modal-title " id="exampleModalLabel ">Vehicles Data</h5>
+                <button type="button " class="close " data-dismiss="modal " aria-label="Close ">
             <span aria-hidden="true ">&times;</span></button>
             </div>
 
 
-            <div class="modal-body">
-                <form [formGroup]="formValue">
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Name</label>
-                        <input type="text" formControlName="fullName" class="form-control " id="exampleInputEmail1 " aria-describedby="emailHelp" placeholder="Enter Full Name">
-                        <small *ngIf="formValue.get('fullName')?.invalid && formValue.get('fullName')?.touched" class="text-danger">Name is Required</small>
+            <div class="modal-body ">
+                <form [formGroup]="formValue ">
+                    <div class="form-group ">
+                        <label for="exampleInputEmail1 ">Name</label>
+                        <input type="text " formControlName="fullName " class="form-control " id="exampleInputEmail1 " aria-describedby="emailHelp " placeholder="Enter Full Name ">
+                        <small *ngIf="formValue.get( 'fullName')?.invalid && formValue.get( 'fullName')?.touched " class="text-danger ">Name is Required</small>
                     </div><br>
 
                     <div class=" form-group ">
                         <label for="exampleInputEmail1 ">Vehicle Number</label>
-                        <input type="number" formControlName="vehicleNo" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp " placeholder="Enter Vehicle Number">
-                        <small *ngIf="formValue.get('vehicleNo')?.invalid && formValue.get('vehicleNo')?.touched" class="text-danger">Vehicle Number is Required</small>
+                        <input type="text " formControlName="vehicleNo " class="form-control " id="exampleInputEmail1 " aria-describedby="emailHelp " placeholder="Enter Vehicle Number ">
+                        <small *ngIf="formValue.get( 'vehicleNo')?.invalid && formValue.get( 'vehicleNo')?.touched " class="text-danger ">Vehicle Number is Required</small>
                     </div><br>
 
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Email</label>
-                        <input type="email" formControlName="emailId" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Email Id">
-                        <small *ngIf="formValue.get('emailId')?.invalid && formValue.get('emailId')?.touched" class="text-danger">Email is Required</small>
+                    <div class="form-group ">
+                        <label for="exampleInputEmail1 ">Email</label>
+                        <input type="email " formControlName="emailId " class="form-control " id="exampleInputEmail1 " aria-describedby="emailHelp " placeholder="Enter Email Id ">
+                        <small *ngIf="formValue.get( 'emailId')?.invalid && formValue.get( 'emailId')?.touched " class="text-danger ">Email is Required</small>
                     </div><br>
 
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Mobile</label>
-                        <input type="number" formControlName="mobileNo" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Mobile Number">
-                        <small *ngIf="formValue.get('mobileNo')?.invalid && formValue.get('mobileNo')?.touched" class="text-danger">Mobile Number is Required</small>
+                    <div class="form-group ">
+                        <label for="exampleInputEmail1 ">Mobile</label>
+                        <input type="number " formControlName="mobileNo " class="form-control " id="exampleInputEmail1 " aria-describedby="emailHelp " placeholder="Enter Mobile Number ">
+                        <small *ngIf="formValue.get( 'mobileNo')?.invalid && formValue.get( 'mobileNo')?.touched " class="text-danger ">Mobile Number is Required</small>
                     </div><br>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">City</label>
-                        <input type="text" formControlName="cityName" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter City Name">
-                        <small *ngIf="formValue.get('cityName')?.invalid && formValue.get('cityName')?.touched" class="text-danger">City is Required</small>
+                    <div class="form-group ">
+                        <label for="exampleInputEmail1 ">City</label>
+                        <input type="text " formControlName="cityName " class="form-control " id="exampleInputEmail1 " aria-describedby="emailHelp " placeholder="Enter City Name ">
+                        <small *ngIf="formValue.get( 'cityName')?.invalid && formValue.get( 'cityName')?.touched " class="text-danger ">City is Required</small>
                     </div>
 
-                    <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+                    <!-- <button type="submit " class="btn btn-primary ">Submit</button> -->
                 </form>
 
             </div>
 
-            <div class="modal-footer">
-                <button for="example" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button *ngIf="showadd" type="button" (click)="addNewVehiclesData()" class="btn btn-success">Add</button>
-                <button *ngIf="showupdate" type=" button" (click)="updateButton()" class=" btn btn-success ">Update</button>
+            <div class="modal-footer ">
+                <button for="example " type="button " class="btn btn-secondary " data-dismiss="modal ">Close</button>
+                <button *ngIf="showadd " type="button " (click)="addNewVehiclesData() " [disabled]="formValue.invalid " class="btn btn-success ">Add</button>
+                <button *ngIf="showupdate " type=" button " (click)="updateButton() " class=" btn btn-success ">Update</button>
             </div>
 
 

@@ -42,7 +42,7 @@ export class DashboardComponent implements OnInit {
   editData(vehiclesdata:any){
     this.showadd = false;
     this.showupdate = true;
-   this.vehiclesmodelObj.id = vehiclesdata.id;
+    this.vehiclesmodelObj.id = vehiclesdata.id;
   this.formValue.controls['fullName'].setValue(vehiclesdata.fullName);
   this.formValue.controls['vehicleNo'].setValue(vehiclesdata.vehicleNo);
   this.formValue.controls['emailId'].setValue(vehiclesdata.emailId);
@@ -61,10 +61,10 @@ export class DashboardComponent implements OnInit {
     this.api.updateVehcileData(this.vehiclesmodelObj, this.vehiclesmodelObj.id).subscribe(res=>{
       this.formValue.reset();
       this.getdata_vehicle();
-      alert("Record Successfully Added");
+      alert("Record Successfully Updated");
     },
-    err=> {
-        alert("Somethings is not working");
+    err=>{
+      alert('Somethings not working on update');
     })
   }
 
