@@ -1,0 +1,24 @@
+{
+  "posts": [
+    {
+      "id": 4,
+      "fullName": "anittt",
+      "vehcileNo": 7899454545465,
+      "emailId": "anitha.kha2@gmail.com",
+      "mobileNo": 787892789378972,
+      "cityName": "nnnn"
+    },
+    {
+      "id": 5,
+      "fullName": "nimmm",
+      "vehcileNo": 878787877878,
+      "emailId": "aniytdytdy",
+      "mobileNo": 9787878787,
+      "cityName": "kjfkrjf"
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
